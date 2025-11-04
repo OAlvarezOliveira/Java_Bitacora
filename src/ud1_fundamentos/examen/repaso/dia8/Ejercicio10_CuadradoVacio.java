@@ -4,20 +4,18 @@ import java.util.Scanner;
 
 /*
  
-Ejercicio 2 — Cuadrado hueco
-
-Mismo tamaño, pero solo con bordes:
+Pide un número n y dibuja un cuadrado de n x n con asteriscos *.
 
 Ejemplo (n = 4):
 
 ****
-*  *
-*  *
+****
+****
 ****
  
 */
 
-public class Ejercicio10_CuadradoVacio {
+public class  Ejercicio10_CuadradoVacio {
 
 	public static void main(String[] args) {
 
@@ -31,18 +29,22 @@ public class Ejercicio10_CuadradoVacio {
 		System.out.println("Introduce el lado del cuadrado");
 		n = entrada.nextInt();
 
-		for (int i = 1; i <= n; i++) {
+		for (int i = 0; i < n; i++) {
 
-			for (int j = 1; j <= n; j++) {
+			for (int j = 0 ; j < n; j++) {
 
-				System.out.print("*");
+				if (i == 0 || j == 0 || i == n - 1 || j == n - 1  ) {
+					System.out.print("*");
+				} else {
+					System.out.print(" ");
+				}
 
 			}
 
 			System.out.println();
 
 		}
-
+		entrada.close();
 	}
 
 }

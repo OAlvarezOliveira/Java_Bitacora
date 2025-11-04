@@ -44,7 +44,7 @@ public class Ejercicio09_CuadradoLleno {
 			System.out.println();
 
 		}
-
+		entrada.close();
 	}
 
 }
