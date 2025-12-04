@@ -29,7 +29,7 @@ public class EjercicioCentinela {
 
 		// Inicializacion de Variables
 		numero = 0;
-		contadorPositivos= 0;
+		contadorPositivos = 0;
 		contadorNegativos = 0;
 		sumaNumeros = 0;
 		entrada = new Scanner(System.in);
@@ -60,7 +60,7 @@ public class EjercicioCentinela {
 
 		// Salida de datos
 
-		System.out.printf("%s %d %n", "Positivos:", contadorPositivos );
+		System.out.printf("%s %d %n", "Positivos:", contadorPositivos);
 
 		System.out.printf("%s %d %n", "Negativos:", contadorNegativos);
 
