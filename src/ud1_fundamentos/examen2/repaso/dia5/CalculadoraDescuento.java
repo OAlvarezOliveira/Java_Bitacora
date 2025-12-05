@@ -87,13 +87,13 @@ public class CalculadoraDescuento {
 				} else {
 
 					if (edad <= 12) { // Niños
-						if (importe >= 50) {
+						if (importe >= MINIMACOMPRA_NINHOS) {
 							precioFinal = importe * (1 - DESCUENTO_NINHOS);
 						} else {
 							precioFinal = importe; // SIN descuento
 						}
 					} else if (edad <= 64) { // Adultos
-						if (importe >= 100) {
+						if (importe >= MINIMACOMPRA_ADULTOS) {
 							precioFinal = importe * (1 - DESCUENTO_ADULTOS);
 						} else {
 							precioFinal = importe; // SIN descuento
