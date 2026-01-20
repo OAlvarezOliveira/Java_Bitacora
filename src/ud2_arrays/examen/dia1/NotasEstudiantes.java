@@ -3,6 +3,7 @@
  */
 package ud2_arrays.examen.dia1;
 
+import java.util.Iterator;
 import java.util.Scanner;
 
 /**
@@ -13,9 +14,11 @@ import java.util.Scanner;
  * Mostrar la tabla completa de notas Calcular y mostrar la nota media de cada
  * estudiante Mostrar qué estudiante tiene la media más alta"
  * 
- * Ejemplo de ejecución: === TABLA DE NOTAS === Estudiante Asig1 Asig2 Asig3
- * Asig4 Media ------------------------------------------------------- Juan 7.5
- * 8.0 6.5 9.0 7.75 María 9.0 9.5 8.5 10.0 9.25 Pedro 6.0 7.0 5.5 8.0 6.63
+ * Ejemplo de ejecución: === TABLA DE NOTAS === 
+ * Estudiante Asig1  Asig2  Asig3 Asig4 Media ------------------------------------------------------- 
+ * Juan        7.5    8.0   6.5    9.0  7.75 
+ * María       9.0    9.5   8.5    10.0 9.25 
+ * Pedro       6.0    7.0   5.5    8.0  6.63
  * 
  * Estudiante con mejor media: María (9.25)
  */
@@ -36,11 +39,11 @@ public class NotasEstudiantes {
 
 		leerDatos(entrada, nombres, notas, asignaturas);
 		calcularMedias(notas, medias);
-		indiceMejorMedia = encontrarMejorMedia(medias);
+	    encontrarMejorMedia(notas);
 		mostrarTabla(nombres, notas, medias);
 
-		System.out.printf("Estudiante con mejor media: %s (%.2f) \n", nombres[indiceMejorMedia],
-				medias[indiceMejorMedia]);
+	//	System.out.printf("Estudiante con mejor media: %s (%.2f) \n", nombres[indiceMejorMedia],
+	//			medias[indiceMejorMedia]);
 
 	}
 
@@ -49,9 +52,18 @@ public class NotasEstudiantes {
 
 	}
 
-	private static int encontrarMejorMedia(double[] medias) {
+	private static void  encontrarMejorMedia(double[][] notas) {
 
-		return 0;
+		for (double[] i: notas) {
+			
+			System.out.printf("%s",i);
+			for (double j : i) {
+				System.out.printf("%s : %.2f ", j);
+
+			}
+			System.out.printf("%n");
+
+		}
 	}
 
 	private static void calcularMedias(double[][] notas, double[] medias) {
