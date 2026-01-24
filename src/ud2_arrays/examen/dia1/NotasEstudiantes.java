@@ -46,21 +46,17 @@ public class NotasEstudiantes {
 	}
 
 	private static void mostrarTabla(String[] nombres, double[][] notas, double[] medias, String[] asignaturas) {
-		// 1. Imprimir encabezado
+
 		System.out.printf("=== TABLA DE NOTAS === \n");
 		System.out.printf("Estudiante\t%s\t%s\t%s\t%s\tMedia\n", asignaturas[0], asignaturas[1], asignaturas[2],
 				asignaturas[3]);
-		// 2. Bucle para cada estudiante
+	
 		for (int i = 0; i < ESTUDIANTES; i++) {
-			// Imprimir nombre
 			System.out.printf("%s\t", nombres[i]);
 
-			// Imprimir las 4 notas (sin \n)
 			for (int j = 0; j < ASIGNATURAS; j++) {
 				System.out.printf("%.2f\t", notas[i][j]);
 			}
-
-			// Imprimir media (CON \n para cambiar de línea)
 			System.out.printf("%.2f\n", medias[i]);
 		}
 	}
